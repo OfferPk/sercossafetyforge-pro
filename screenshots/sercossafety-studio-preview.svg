@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090e17"/>
+      <stop offset="100%" stop-color="#0f1827"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#152438"/>
+      <stop offset="100%" stop-color="#1d304a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- Grid subtle background -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="375" x2="1200" y2="375"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="40" y="30" width="1120" height="70" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <rect x="60" y="47" width="130" height="36" rx="4" fill="url(#goldGrad)"/>
+  <text x="125" y="71" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#000" text-anchor="middle">SIL 3 / PL e</text>
+  <text x="210" y="72" font-family="system-ui, sans-serif" font-weight="700" font-size="24" fill="#ffffff">SercosSafetyForge <tspan fill="#f59e0b">Pro</tspan></text>
+  <text x="1130" y="71" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="end">IEC 61784-3-16 • Sercos III CIP Safety Mapping</text>
+
+  <!-- Left Card: Protocol Architecture -->
+  <rect x="40" y="125" width="545" height="490" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <text x="70" y="165" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#f59e0b">Sercos Safety Container &amp; Dual CRC-16</text>
+  <text x="70" y="195" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Encapsulated inside Sercos III Real-Time Connections (MDT / AT Frames):</text>
+
+  <!-- Frame Layout Boxes -->
+  <g transform="translate(70, 220)">
+    <rect x="0" y="0" width="80" height="55" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="40" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">ConnID</text>
+    <text x="40" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">2B</text>
+
+    <rect x="90" y="0" width="85" height="55" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="132" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Payload</text>
+    <text x="132" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">1..2 Bytes</text>
+
+    <rect x="185" y="0" width="60" height="55" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="215" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Mode</text>
+    <text x="215" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">1B</text>
+
+    <rect x="255" y="0" width="75" height="55" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="292" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#34d399" text-anchor="middle">CRC-S1</text>
+    <text x="292" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">0x5935</text>
+
+    <rect x="340" y="0" width="75" height="55" rx="4" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="377" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#22d3ee" text-anchor="middle">Timestamp</text>
+    <text x="377" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">2B (16-bit)</text>
+
+    <rect x="425" y="0" width="75" height="55" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="462" y="25" font-family="monospace" font-size="11" font-weight="bold" fill="#34d399" text-anchor="middle">CRC-S2</text>
+    <text x="462" y="42" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">0x759B</text>
+  </g>
+
+  <!-- Technical Specs Block -->
+  <rect x="70" y="300" width="485" height="150" rx="6" fill="#050913" stroke="#1e293b" stroke-width="1"/>
+  <text x="90" y="330" font-family="monospace" font-size="12" fill="#38bdf8">• Safety Network Number (SNN): 9B_24_A1_C0_11_02 (6 Octets)</text>
+  <text x="90" y="360" font-family="monospace" font-size="12" fill="#38bdf8">• Connection ID (ConnID): Range 1 to 65535 (Slot binding)</text>
+  <text x="90" y="390" font-family="monospace" font-size="12" fill="#38bdf8">• CRC-S1: Poly 0x5935 | CRC-S2: Poly 0x759B (Dual Diverse)</text>
+  <text x="90" y="420" font-family="monospace" font-size="12" fill="#10b981">• Residual Error Rate: Lambda &lt; 10^-9 h^-1 (SIL 3 / PL e)</text>
+
+  <rect x="70" y="475" width="485" height="110" rx="6" fill="#0f1827" stroke="#1e293b" stroke-width="1"/>
+  <text x="90" y="505" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">Bosch Rexroth Safe Motion Integration</text>
+  <text x="90" y="530" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Supports Safe Torque Off (STO), SLS, SDI over Sercos III optical/copper</text>
+  <text x="90" y="555" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• End-to-End Black Channel verification independent of ring switching</text>
+
+  <!-- Right Card: Timing & 10-Point Auditor -->
+  <rect x="615" y="125" width="545" height="490" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <text x="645" y="165" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#f59e0b">Sercos Timing Sizer &amp; 10-Point SIL 3 Auditor</text>
+  
+  <!-- Timing Sizer Calculation Box -->
+  <rect x="645" y="195" width="485" height="165" rx="6" fill="#050913" stroke="#1e293b" stroke-width="1"/>
+  <text x="665" y="225" font-family="monospace" font-size="13" font-weight="bold" fill="#f59e0b">[SERCOS III SAFETY TIMING EQUATION]</text>
+  <text x="665" y="250" font-family="monospace" font-size="12" fill="#cbd5e1">T_resp = T_in(4ms) + 2*EPI(4ms) + T_ctrl(6ms)</text>
+  <text x="705" y="270" font-family="monospace" font-size="12" fill="#cbd5e1">+ T_timeout(8ms) + T_actuator(20ms) = 42.0 ms</text>
+  <line x1="665" y1="285" x2="1110" y2="285" stroke="#1e293b"/>
+  <text x="665" y="310" font-family="monospace" font-size="12" fill="#10b981">ISO 13855 Distance: S = (1600 mm/s * 0.042 s) + 100 mm = 167.2 mm</text>
+  <text x="665" y="335" font-family="monospace" font-size="12" fill="#06b6d4">Timeout Margin: Multiplier = 4x (T_timeout = 8.0 ms PASS)</text>
+
+  <!-- 10-Point Audit Summary -->
+  <rect x="645" y="380" width="485" height="205" rx="6" fill="#0f1827" stroke="#1e293b" stroke-width="1"/>
+  <text x="665" y="410" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">10-Point SIL 3 Compliance Checklist (10/10 Verified)</text>
+  
+  <text x="665" y="440" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 1. SNN 6-Octet Uniqueness (Cl. 6.3.2)</text>
+  <text x="910" y="440" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 6. Total Response &lt;= 100ms</text>
+  
+  <text x="665" y="465" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 2. Dual Diverse CRCs (0x5935/759B)</text>
+  <text x="910" y="465" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 7. STO Safe Fallback Determinism</text>
+
+  <text x="665" y="490" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 3. Sercos ConnID Binding (1..65535)</text>
+  <text x="910" y="490" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 8. Ring Redundancy Independence</text>
+
+  <text x="665" y="515" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 4. Dynamic Timestamp Tracking</text>
+  <text x="910" y="515" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 9. Discrepancy Filter &lt;= 200ms</text>
+
+  <text x="665" y="540" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 5. Timeout Multiplier &gt;= 4x</text>
+  <text x="910" y="540" font-family="monospace" font-size="11" fill="#94a3b8">[✓] 10. IndraWorks Safety Lock</text>
+
+  <rect x="665" y="555" width="445" height="20" rx="3" fill="url(#emeraldGrad)"/>
+  <text x="887" y="569" font-family="system-ui, sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">IEC 61784-3-16 / ISO 13849-1 SIL 3 &amp; PL e COMPLIANT</text>
+
+</svg>
